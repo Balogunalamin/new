@@ -1,0 +1,45 @@
+{
+  "expo": {
+    "name": "Artisan",
+    "slug": "artisan-mobile",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "scheme": "artisan",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.artisanhq.app",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Artisan uses your location to show nearby artisans."
+      }
+    },
+    "android": {
+      "package": "com.artisanhq.app",
+      "adaptiveIcon": {
+        "backgroundColor": "#ffffff"
+      },
+      "permissions": ["ACCESS_COARSE_LOCATION", "ACCESS_FINE_LOCATION"]
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Artisan uses your location to show nearby artisans."
+        }
+      ],
+      "expo-secure-store"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "apiBaseUrl": "http://localhost:3000"
+    }
+  }
+}
